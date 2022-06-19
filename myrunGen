@@ -1,7 +1,7 @@
 #!/bin/bash
 
 PYNAME=runGen.py
-wget https://github.com/zhaoyuyoung/files/blob/main/$PYNAME
+wget https://raw.githubusercontent.com/zhaoyuyoung/files/main/runGen.py
 
 if command -v python &> /dev/null
 then
