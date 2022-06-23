@@ -19,6 +19,7 @@ jobs:
       - name: 🍳 Shake & bake README
         run: |
           cd ${GITHUB_WORKSPACE}/update/
+          go env -w GOFLAGS=-mod=mod
           go run main.go
       - name: 🚀 Deploy
         run: |
