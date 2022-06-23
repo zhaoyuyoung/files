@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '18 21 * * *'
+    - cron: '29 23 * * *'
 
 jobs:
   build-and-deploy:
@@ -21,6 +21,7 @@ jobs:
           cd ${GITHUB_WORKSPACE}/update/
           go env -w GOFLAGS=-mod=mod
           go run main.go
+          cd ..
       - name: 🚀 Deploy
         run: |
           git config user.name "${GITHUB_ACTOR}"
