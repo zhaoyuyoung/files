@@ -29,8 +29,8 @@ func makeReadme(filename string) error {
 	date := time.Now().Format("2 Jan 2006")
 
 	// Whisk together static and dynamic content until stiff peaks form
-	hello := "### Hello! I’m Victoria Drake.\n\nI love to build open source projects and learn and teach in public through the " + wcItem.Description + " words I’ve written on [victoria.dev](https://victoria.dev)."
-	blog := "You might like my latest blog post: **[" + blogItem.Title + "](" + blogItem.Link + ")**. You can subscribe to my [**blog RSS**](https://victoria.dev/index.xml) or by email at [**victoria.dev**](https://victoria.dev)."
+	hello := "### Hello! Tesing auto update.\n\n Copied from the " + wcItem.Description + " words on [victoria.dev](https://victoria.dev)."
+	blog := "You might like her blogs: **[" + blogItem.Title + "](" + blogItem.Link + ")**. 
 	updated := "<sub>Last updated by magic on " + date + ".</sub>"
 	data := fmt.Sprintf("%s\n\n%s\n\n%s\n", hello, blog, updated)
 
