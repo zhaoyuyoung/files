@@ -30,7 +30,7 @@ func makeReadme(filename string) error {
 
 	// Whisk together static and dynamic content until stiff peaks form
 	hello := "### Hello! Tesing auto update.\n\n Copied from the " + wcItem.Description + " words on [victoria.dev](https://victoria.dev)."
-	blog := "You might like her blogs: **[" + blogItem.Title + "](" + blogItem.Link + ")**. 
+	blog := "You might like her blogs: **[" + blogItem.Title + "](" + blogItem.Link + ")**". 
 	updated := "<sub>Last updated by magic on " + date + ".</sub>"
 	data := fmt.Sprintf("%s\n\n%s\n\n%s\n", hello, blog, updated)
 
