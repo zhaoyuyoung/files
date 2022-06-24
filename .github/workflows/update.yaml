@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '19 0 * * *'
+    - cron: '25 0 * * *'
 
 jobs:
   build-and-deploy:
@@ -18,6 +18,7 @@ jobs:
           fetch-depth: 1
       - name: 🍳 Shake & bake README
         run: |
+          rm README.md
           cd ${GITHUB_WORKSPACE}/update/
           go env -w GOFLAGS=-mod=mod
           go run main.go
