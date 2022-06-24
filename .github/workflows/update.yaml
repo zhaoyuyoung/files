@@ -18,7 +18,6 @@ jobs:
           fetch-depth: 1
       - name: 🍳 Shake & bake README
         run: |
-          rm README.md
           cd ${GITHUB_WORKSPACE}/update/
           go env -w GOFLAGS=-mod=mod
           go run main.go
