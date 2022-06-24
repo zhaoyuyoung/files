@@ -22,5 +22,5 @@ jobs:
           go env -w GOFLAGS=-mod=mod
           go run main.go
           cd ${GITHUB_WORKSPACE}
-      - name: 🚀 Deploy
+
 
