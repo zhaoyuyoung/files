@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '12 1 * * *'
+    - cron: '16 1 * * *'
 
 jobs:
   build-and-deploy:
@@ -21,6 +21,7 @@ jobs:
           cd ${GITHUB_WORKSPACE}/update/
           go env -w GOFLAGS=-mod=mod
           go run main.go
+          mv README.md ..
           cd ${GITHUB_WORKSPACE}
       - name: 🍳 Deploy    
         run: |
