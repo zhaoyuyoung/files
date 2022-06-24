@@ -5,7 +5,7 @@ on:
     branches:
       - main
   schedule:
-    - cron: '17 1 * * *'
+    - cron: '23 1 * * *'
 
 jobs:
   build-and-deploy:
@@ -28,7 +28,7 @@ jobs:
           git config user.name "${GITHUB_ACTOR}"
           git config user.email "${GITHUB_ACTOR}@users.noreply.github.com"
           git add .
-          git commit -am "Update dynamic content"
+          git commit -am "Update dynamic content" || exit 0
           git push --all -f https://${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git
 
 
